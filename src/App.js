@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React  from 'react';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import Signin from './pages/Signin';
+import Signup from './pages/Signup';
+import Cart from './pages/Cart';
+import SingleProductPage from './pages/SingleProductPage';
+import PageNotFound from './pages/PageNotFound';
+import Navbar from './components/Navbar';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Container } from '@mui/system';
+import Footer from './components/Footer';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <ToastContainer />
+      <Container maxWidth='lg'>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/signin' element={<Signin />} />
+          <Route path='/signup' element={<Signup />} />
+          <Route path='/cart' element={<Cart />} />
+          <Route path='/product/:name' element={<SingleProductPage />} /> 
+          <Route path='*' element={<PageNotFound />} />
+        </Routes>
+      </Container>
+      <Footer />
+    </>
   );
 }
 
