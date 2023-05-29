@@ -2,7 +2,6 @@ import { Box,Toolbar, AppBar, CssBaseline, Typography, Stack, ListItem, Link } f
 import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import YouTubeIcon from '@mui/icons-material/YouTube';
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
@@ -16,18 +15,17 @@ const Footer = () => {
             <Typography variant="h5"> RCommercy </Typography>
           </Stack>
 
-          <Stack alignContent={'center'} >
+          <Stack alignContent={'center'}>
             <ListItem>
               <Link component={RouterLink} to={"https://www.instagram.com/gupta_roshan75/"} target='_blank' 
-                sx={{ color: 'white'}} px={2}> <InstagramIcon />
+                sx={{ color: 'white'}} px={1}> <InstagramIcon />
               </Link>
               <Link component={RouterLink} to={"https://github.com/guptaroshan75"} target='_blank'
-                sx={{ color: 'white'}} px={2}> <GitHubIcon />
+                sx={{ color: 'white'}} px={1}> <GitHubIcon />
               </Link>
               <Link component={RouterLink} to={"https://www.linkedin.com/in/roshangupta2000/"} target='_blank'
-                sx={{ color: 'white'}} px={2}> <LinkedInIcon />
+                sx={{ color: 'white'}} px={1}> <LinkedInIcon />
               </Link>
-              <Link component={RouterLink} sx={{ color: 'white'}} px={2}> <YouTubeIcon /> </Link>
             </ListItem>
           </Stack>
           </Toolbar>
