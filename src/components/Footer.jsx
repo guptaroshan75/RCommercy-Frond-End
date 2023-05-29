@@ -18,13 +18,13 @@ const Footer = () => {
           <Stack alignContent={'center'}>
             <ListItem>
               <Link component={RouterLink} to={"https://www.instagram.com/gupta_roshan75/"} target='_blank' 
-                sx={{ color: 'white'}} px={1}> <InstagramIcon />
+                sx={{ color: 'white'}} px={2}> <InstagramIcon />
               </Link>
               <Link component={RouterLink} to={"https://github.com/guptaroshan75"} target='_blank'
-                sx={{ color: 'white'}} px={1}> <GitHubIcon />
+                sx={{ color: 'white'}} px={2}> <GitHubIcon />
               </Link>
               <Link component={RouterLink} to={"https://www.linkedin.com/in/roshangupta2000/"} target='_blank'
-                sx={{ color: 'white'}} px={1}> <LinkedInIcon />
+                sx={{ color: 'white'}} px={2}> <LinkedInIcon />
               </Link>
             </ListItem>
           </Stack>
